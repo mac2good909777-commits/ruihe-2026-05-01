@@ -3,12 +3,211 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>瑞禾不動產 · 2026/05 精選農地四案聯合提案</title>
-<meta name="description" content="瑞禾不動產經紀股份有限公司 2026 年 5 月精選四案：臺中龍井潛力農地、南投中興交流道營南段、雲林麥寮豐津都計區徵農地兩案。專業團隊量身規劃投資布局。">
+<title>瑞禾不動產 · 2026/05 精選農地物件</title>
+<meta name="description" content="瑞禾不動產經紀 2026 年 5 月精選農地：臺中龍井農變同意地、南投中興交流道都計農地、雲林麥寮豐津都計區徵收農地。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=Inter:wght@500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+/* ── 本頁補充樣式 ── */
+.page-hero {
+  background: #1a2318;
+  color: #fff;
+  padding: 64px 0 52px;
+  text-align: center;
+}
+.page-hero .tag {
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--ink-gold);
+  margin-bottom: 16px;
+}
+.page-hero h1 {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 900;
+  letter-spacing: .02em;
+  margin: 0 0 10px;
+}
+.page-hero p {
+  font-size: 15px;
+  color: rgba(255,255,255,.6);
+  margin: 0;
+}
+
+/* ── 分類區塊 ── */
+.cat-block {
+  border-top: 3px solid var(--ink-green);
+  margin: 56px auto 0;
+  max-width: 900px;
+  padding: 0 24px 56px;
+}
+.cat-block.gold  { border-color: var(--ink-gold); }
+.cat-block.slate { border-color: #6b7280; }
+
+.cat-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  margin-bottom: 6px;
+}
+.cat-no {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--ink-green);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.cat-block.gold .cat-no   { background: var(--ink-gold); color: var(--ink-dark); }
+.cat-block.slate .cat-no  { background: #6b7280; }
+
+.cat-type {
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+.cat-title {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 900;
+  color: var(--ink-dark);
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+.cat-subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0 0 24px;
+}
+
+/* ── 單案卡片（A案）── */
+.solo-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+@media (max-width: 640px) { .solo-card { grid-template-columns: 1fr; } }
+.solo-card .sc-left {
+  background: var(--ink-dark);
+  color: #fff;
+  padding: 32px 28px;
+}
+.solo-card .sc-left .corner {
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--ink-gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.solo-card .sc-left .loc  { font-size: 12px; color: rgba(255,255,255,.5); margin-bottom: 8px; letter-spacing:.06em; }
+.solo-card .sc-left h2    { font-size: 20px; font-weight: 800; margin: 0 0 16px; line-height: 1.3; }
+.solo-card .sc-left .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.solo-card .sc-right {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.solo-card .sc-kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.solo-card .kpi .lbl { font-size: 10px; color: var(--text-light); letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px; }
+.solo-card .kpi .val { font-size: 20px; font-weight: 800; color: var(--ink-dark); }
+.solo-card .kpi .val small { font-size: 12px; font-weight: 500; color: var(--text-light); }
+.solo-card .sc-pts { font-size: 13.5px; color: var(--text-soft); line-height: 1.7; margin-bottom: 20px; }
+.solo-card .sc-pts li { margin-bottom: 4px; }
+
+/* ── 雙案卡片（C+D）── */
+.duo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 600px) { .duo-grid { grid-template-columns: 1fr; } }
+.duo-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.duo-card .dc-head {
+  background: var(--ink-green);
+  color: #fff;
+  padding: 18px 20px 14px;
+}
+.duo-card.alt-card .dc-head { background: #4b5563; }
+.duo-card .dc-corner { font-size: 36px; font-weight: 900; color: rgba(255,255,255,.3); line-height:1; margin-bottom: 4px; }
+.duo-card .dc-name   { font-size: 15px; font-weight: 700; line-height: 1.3; }
+.duo-card .dc-body   { padding: 18px 20px; }
+.duo-card .dc-kpis   { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.duo-card .kpi .lbl  { font-size: 10px; color: var(--text-light); letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px; }
+.duo-card .kpi .val  { font-size: 18px; font-weight: 800; color: var(--ink-dark); }
+.duo-card .kpi .val small { font-size: 11px; font-weight: 500; color: var(--text-light); }
+.duo-card .dc-pts    { font-size: 13px; color: var(--text-soft); line-height: 1.65; margin-bottom: 14px; }
+.duo-card .dc-pts li { margin-bottom: 3px; }
+
+/* ── B案卡片（全寬單案）── */
+.b-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+@media (max-width: 640px) { .b-card { grid-template-columns: 1fr; } }
+.b-card .bc-left {
+  background: var(--ink-gold);
+  color: var(--ink-dark);
+  padding: 28px 20px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.b-card .bc-left .corner { font-size: 48px; font-weight: 900; line-height: 1; opacity:.25; margin-bottom: 8px; }
+.b-card .bc-left h2 { font-size: 17px; font-weight: 800; line-height: 1.35; margin: 0 0 12px; }
+.b-card .bc-left .loc { font-size: 11px; letter-spacing:.06em; opacity: .7; }
+.b-card .bc-right { padding: 28px; }
+.b-card .bc-kpis  { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
+@media (max-width: 680px) { .b-card .bc-kpis { grid-template-columns: 1fr 1fr; } }
+.b-card .kpi .lbl { font-size: 10px; color: var(--text-light); letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px; }
+.b-card .kpi .val { font-size: 18px; font-weight: 800; color: var(--ink-dark); }
+.b-card .kpi .val small { font-size: 11px; font-weight: 500; color: var(--text-light); }
+.b-card .bc-pts { font-size: 13.5px; color: var(--text-soft); line-height: 1.7; margin-bottom: 18px; }
+.b-card .bc-pts li { margin-bottom: 4px; }
+
+/* ── 通用 ── */
+.go-link {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  background: var(--ink-green);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .04em;
+}
+.go-link:hover { opacity: .85; }
+.go-link.gold-link { background: var(--ink-gold); color: var(--ink-dark); }
+.go-link.slate-link { background: #4b5563; color: #fff; }
+
+.area-note {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: #f8f7f2;
+  border-left: 3px solid var(--ink-gold);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+.area-note a { color: var(--ink-gold); }
+
+.divider { border: none; border-top: 1px solid var(--rule); margin: 0; }
+</style>
 </head>
 <body>
 
@@ -23,238 +222,242 @@
       </div>
     </a>
     <nav class="top-nav">
-      <a href="#cases" class="hide-mobile">四案速覽</a>
-      <a href="#why" class="hide-mobile">投資邏輯</a>
+      <a href="#cat-a" class="hide-mobile">龍井農變地</a>
+      <a href="#cat-b" class="hide-mobile">南投中興</a>
+      <a href="#cat-c" class="hide-mobile">麥寮豐津</a>
       <a href="#agent">洽詢顧問</a>
     </nav>
   </div>
 </header>
 
-<!-- Hub Hero -->
-<section class="hub-hero">
-  <div class="inner">
-    <div class="tag">RUEI·HE  ·  2026 / 05  ·  FEATURED PORTFOLIO</div>
-    <h1>四案聯合提案<br><span class="accent">中部關鍵節點</span>，農地布局關鍵時刻</h1>
-    <p class="lede">
-      臺中龍井潛力農地、南投中興交流道營南段、雲林麥寮豐津都計區徵農地 A／B —
-      四個案件分散三大縣市，皆位於都市計畫、重劃或產業園區擴張的關鍵節點。
-      此份聯合提案聚焦「過去買得起就不嫌貴」的核心邏輯，為您篩選此刻最值得布局的中部農地組合。
-    </p>
-    <div class="summary-row">
-      <div class="sm"><div class="k">CASES</div><div class="v num">4 案</div></div>
-      <div class="sm"><div class="k">REGIONS</div><div class="v">3 縣市</div></div>
-      <div class="sm"><div class="k">TOTAL AREA</div><div class="v num">3,910<span style="font-size:13px;font-weight:500;"> 坪</span></div></div>
-      <div class="sm"><div class="k">PRICE RANGE</div><div class="v">議價～5,365 萬</div></div>
-    </div>
-  </div>
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="tag">RUEI·HE  ·  2026 / 05  ·  精選農地物件</div>
+  <h1>本月精選農地</h1>
+  <p>三類型物件 · 各具獨立投資邏輯 · 臺中 / 南投 / 雲林</p>
 </section>
 
-<!-- Why now -->
-<section id="why" class="section">
-  <div class="sec-head">
-    <span class="num-tag">01</span>
-    <span class="bar"></span>
-    <h2>為何此刻</h2>
-    <span class="en">WHY NOW</span>
+<div style="max-width:900px;margin:0 auto;padding:0 24px;">
+
+<!-- ══════════════════════════════
+     類型一：A案 獨立物件
+     ══════════════════════════════ -->
+<div class="cat-block" id="cat-a">
+  <div class="cat-label">
+    <div class="cat-no">1</div>
+    <span class="cat-type">獨立物件 · 即可營運</span>
   </div>
-  <div class="bullet-list">
-    <div class="row">
-      <div class="ic">1</div>
-      <div class="txt">
-        <h4>中興交流道新訂都計案進入推動期</h4>
-        <p>南投縣府已將中興交流道附近 726 公頃非都市土地納入新訂都市計畫，涵蓋南投市營北、營南、福興等 16 里，預留捷運站與轉運站用地。B 案位於計畫範圍核心區位之內。</p>
+  <div class="cat-title">臺中龍井 · 已核可農變地</div>
+  <div class="cat-subtitle">非農業使用同意函已核發 · 可直接作汽車運輸停車場</div>
+
+  <div class="solo-card">
+    <div class="sc-left">
+      <div class="corner">A</div>
+      <div class="loc">TAICHUNG · LONGJING</div>
+      <h2>正台灣大道<br>潛力農地</h2>
+      <div class="pills">
+        <span class="pill hot">★ 115/03/20 農變同意</span>
+        <span class="pill gold">可作汽車運輸停車場</span>
+        <span class="pill green">8 筆地號整合</span>
+        <span class="pill gold">近龍井交流道</span>
       </div>
     </div>
-    <div class="row">
-      <div class="ic">2</div>
-      <div class="txt">
-        <h4>麥寮豐津都計區已劃定 176 公頃產業專區</h4>
-        <p>「擬定麥寮（豐津地區）都市計畫」共 176.31 公頃，其中 105.18 公頃為產業專用區、19.38 公頃住宅區，瞄準六輕協力與綠色產業聚落，預估引進 600 家廠商、7,000 人就業、年產值 210 億元。C、D 兩案皆落於計畫區內。</p>
+    <div class="sc-right">
+      <div>
+        <div class="sc-kpis">
+          <div class="kpi">
+            <div class="lbl">面積</div>
+            <div class="val">937 <small>坪</small></div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">合計筆數</div>
+            <div class="val">8 <small>筆地號</small></div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">單價</div>
+            <div class="val" style="font-size:15px;color:var(--text-light);">來電議價</div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">總價</div>
+            <div class="val" style="font-size:15px;color:var(--text-light);">來電議價</div>
+          </div>
+        </div>
+        <ul class="sc-pts">
+          <li>農業局同意函已核發，使用項目：<strong>汽車運輸業停車場</strong></li>
+          <li>省去 18～36 個月農地變更程序，適合即時需要調度腹地的業者</li>
+          <li>8 筆地號完整相連、無零碎插花，基地規整易規劃</li>
+          <li>近龍井交流道、台 61 西濱、台中港動線，物流通達性強</li>
+        </ul>
+      </div>
+      <a class="go-link" href="a-longjing.html">查看 A 案完整資訊 →</a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════
+     類型二：B案 南投中興交流道
+     ══════════════════════════════ -->
+<div class="cat-block gold" id="cat-b">
+  <div class="cat-label">
+    <div class="cat-no">2</div>
+    <span class="cat-type">都計題材 · 重劃前布局</span>
+  </div>
+  <div class="cat-title">南投市 · 中興交流道新訂都計農地</div>
+  <div class="cat-subtitle">726 公頃新訂都市計畫推動中 · 城 2-3 身分確立 · 區段徵收開發</div>
+
+  <div class="b-card">
+    <div class="bc-left">
+      <div>
+        <div class="corner">B</div>
+        <div class="loc">NANTOU · ZHONGXING</div>
+      </div>
+      <h2>中興交流道<br>營南段<br>方正農地</h2>
+    </div>
+    <div class="bc-right">
+      <div class="bc-kpis">
+        <div class="kpi">
+          <div class="lbl">面積</div>
+          <div class="val">894 <small>坪</small></div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">格局</div>
+          <div class="val">47×60 <small>米</small></div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">單價</div>
+          <div class="val">4.2 <small>萬／坪</small></div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">總價</div>
+          <div class="val">3,756 <small>萬</small></div>
+        </div>
+      </div>
+      <ul class="bc-pts">
+        <li>南投縣政府正式劃定 <strong>城 2-3</strong>，列入 726 公頃新訂都市計畫範圍</li>
+        <li>計畫採<strong>區段徵收</strong>開發，預留捷運站與轉運站用地</li>
+        <li>面寬 47 米、深度 60 米，長寬比 0.78 近方正，後續分割規劃彈性高</li>
+        <li>位於中興交流道與南投交流道之間，北上台中、南下嘉義皆便利</li>
+      </ul>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+        <a class="go-link gold-link" href="b-yingnan.html">查看 B 案完整資訊 →</a>
+        <a href="zhongxing-area.html" style="font-size:13px;color:var(--ink-gold);border-bottom:1px dotted var(--ink-gold);">中興交流道區域整合服務 →</a>
+      </div>
+      <div class="area-note">
+        瑞禾另有中興交流道特定區 <strong>多筆物件</strong>可洽詢，包含福溪段 293 坪 / 1,120 萬等，歡迎來電了解。
       </div>
     </div>
-    <div class="row">
-      <div class="ic">3</div>
-      <div class="txt">
-        <h4>龍井海線腹地題材成形</h4>
-        <p>A 案位於龍井區、近龍井交流道與台中產業園區，沿台灣大道延伸至台中港的工業帶。已取得 115/03/20 農業局農變同意函，可作汽車運輸停車場使用，為極稀有的「已核可變更」農地組合。</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════
+     類型三：C+D案 雲林麥寮豐津
+     ══════════════════════════════ -->
+<div class="cat-block slate" id="cat-c">
+  <div class="cat-label">
+    <div class="cat-no">3</div>
+    <span class="cat-type">都市計畫區徵收 · 兩件可選</span>
+  </div>
+  <div class="cat-title">雲林麥寮 · 豐津都計區農地</div>
+  <div class="cat-subtitle">176 公頃「擬定麥寮（豐津地區）都市計畫」範圍 · 大坪數或小額入手任選</div>
+
+  <div class="duo-grid">
+
+    <!-- C案 -->
+    <div class="duo-card">
+      <div class="dc-head">
+        <div class="dc-corner">C</div>
+        <div class="dc-name">豐津都計區<br>農地 A　·　大坪數整筆</div>
+      </div>
+      <div class="dc-body">
+        <div class="dc-kpis">
+          <div class="kpi">
+            <div class="lbl">面積</div>
+            <div class="val">1,532 <small>坪</small></div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">格局</div>
+            <div class="val">23×213 <small>米</small></div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">單價</div>
+            <div class="val">3.5 <small>萬／坪</small></div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">總價</div>
+            <div class="val">5,365 <small>萬</small></div>
+          </div>
+        </div>
+        <ul class="dc-pts">
+          <li>臨 <strong>13 米現況路</strong>，臨路條件佳</li>
+          <li>1,500+ 坪整筆在豐津都計區屬大宗</li>
+          <li>可分批承購或合資進場</li>
+        </ul>
+        <div class="pills" style="margin-bottom:14px;">
+          <span class="pill gold">麥寮豐津都計內</span>
+          <span class="pill hot">★ 臨 13 米路</span>
+          <span class="pill green">大坪數</span>
+        </div>
+        <a class="go-link" href="c-fengjin-a.html">查看 C 案完整資訊 →</a>
       </div>
     </div>
-    <div class="row">
-      <div class="ic">4</div>
-      <div class="txt">
-        <h4>價格仍在「過去買得起」的區間</h4>
-        <p>四案單坪價皆落在 3.5～4.2 萬區間（A 案來電議價），與當地過去 5 年實價登錄資料相符。對重劃前布局的投資人而言，這仍是可下注、不嫌貴的價格帶。</p>
+
+    <!-- D案 -->
+    <div class="duo-card alt-card">
+      <div class="dc-head">
+        <div class="dc-corner">D</div>
+        <div class="dc-name">豐津都計臨路<br>農地 B　·　入門總價</div>
+      </div>
+      <div class="dc-body">
+        <div class="dc-kpis">
+          <div class="kpi">
+            <div class="lbl">面積</div>
+            <div class="val">547 <small>坪</small></div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">格局</div>
+            <div class="val">18×98 <small>米</small></div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">單價</div>
+            <div class="val">3.5 <small>萬／坪</small></div>
+          </div>
+          <div class="kpi">
+            <div class="lbl">總價</div>
+            <div class="val">1,915 <small>萬</small></div>
+          </div>
+        </div>
+        <ul class="dc-pts">
+          <li>同一都計範圍、低總價入門配置</li>
+          <li>視承購條件 <strong>具貸款空間</strong></li>
+          <li>單筆即可進場，毋須合資</li>
+        </ul>
+        <div class="pills" style="margin-bottom:14px;">
+          <span class="pill gold">麥寮豐津都計內</span>
+          <span class="pill hot">★ 總價親民</span>
+          <span class="pill green">具貸款條件</span>
+        </div>
+        <a class="go-link slate-link" href="d-fengjin-b.html">查看 D 案完整資訊 →</a>
       </div>
     </div>
+
   </div>
-</section>
 
-<!-- Cases -->
-<section id="cases" class="section alt">
-  <div class="inner">
-    <div class="sec-head">
-      <span class="num-tag">02</span>
-      <span class="bar"></span>
-      <h2>四案速覽</h2>
-      <span class="en">FEATURED CASES · A / B / C / D</span>
-    </div>
-
-    <div class="case-grid">
-
-      <!-- A 案 -->
-      <a class="case-card case-A" href="a-longjing.html">
-        <div class="cc-head">
-          <div class="cc-corner">A</div>
-          <div class="cc-loc">臺中　·　龍井</div>
-          <div class="cc-title">正台灣大道<br>潛力農地</div>
-        </div>
-        <div class="cc-body">
-          <div class="cc-meta">
-            <div class="m"><div class="k">面　積</div><div class="v">937 <span style="font-size:13px;font-weight:500;">坪</span></div></div>
-            <div class="m"><div class="k">合計筆數</div><div class="v">8 <span style="font-size:13px;font-weight:500;">筆</span></div></div>
-            <div class="m price"><div class="k">單　價</div><div class="v" style="font-size:14px;">來電議價</div></div>
-            <div class="m price"><div class="k">總　價</div><div class="v" style="font-size:14px;">來電議價</div></div>
-          </div>
-          <div class="cc-tags">
-            <span class="pill hot">★ 已取得農變同意</span>
-            <span class="pill gold">可作汽車運輸停車場</span>
-            <span class="pill green">8 筆地號整合</span>
-          </div>
-          <span class="cc-cta">查看 A 案完整資訊</span>
-        </div>
-      </a>
-
-      <!-- B 案 -->
-      <a class="case-card case-B" href="b-yingnan.html">
-        <div class="cc-head">
-          <div class="cc-corner">B</div>
-          <div class="cc-loc">南投　·　南投市</div>
-          <div class="cc-title">中興交流道<br>營南段方正農地</div>
-        </div>
-        <div class="cc-body">
-          <div class="cc-meta">
-            <div class="m"><div class="k">面　積</div><div class="v">894 <span style="font-size:13px;font-weight:500;">坪</span></div></div>
-            <div class="m"><div class="k">面寬×深度</div><div class="v">47×60 <span style="font-size:13px;font-weight:500;">米</span></div></div>
-            <div class="m price"><div class="k">單　價</div><div class="v">4.2 <span style="font-size:13px;font-weight:500;">萬</span></div></div>
-            <div class="m price"><div class="k">總　價</div><div class="v">3,756 <span style="font-size:13px;font-weight:500;">萬</span></div></div>
-          </div>
-          <div class="cc-tags">
-            <span class="pill gold">城 2-3 · 新訂都計</span>
-            <span class="pill hot">近方正格局</span>
-            <span class="pill green">兩交流道之間</span>
-          </div>
-          <span class="cc-cta">查看 B 案完整資訊</span>
-        </div>
-      </a>
-
-      <!-- C 案 -->
-      <a class="case-card case-C" href="c-fengjin-a.html">
-        <div class="cc-head">
-          <div class="cc-corner">C</div>
-          <div class="cc-loc">雲林　·　麥寮</div>
-          <div class="cc-title">豐津都計區徵<br>農地 A</div>
-        </div>
-        <div class="cc-body">
-          <div class="cc-meta">
-            <div class="m"><div class="k">面　積</div><div class="v">1,532 <span style="font-size:13px;font-weight:500;">坪</span></div></div>
-            <div class="m"><div class="k">面寬×深度</div><div class="v">23×213 <span style="font-size:13px;font-weight:500;">米</span></div></div>
-            <div class="m price"><div class="k">單　價</div><div class="v">3.5 <span style="font-size:13px;font-weight:500;">萬</span></div></div>
-            <div class="m price"><div class="k">總　價</div><div class="v">5,365 <span style="font-size:13px;font-weight:500;">萬</span></div></div>
-          </div>
-          <div class="cc-tags">
-            <span class="pill gold">麥寮豐津都計內</span>
-            <span class="pill hot">臨 13 米現況路</span>
-            <span class="pill green">大坪數 1,500+</span>
-          </div>
-          <span class="cc-cta">查看 C 案完整資訊</span>
-        </div>
-      </a>
-
-      <!-- D 案 -->
-      <a class="case-card case-D" href="d-fengjin-b.html">
-        <div class="cc-head">
-          <div class="cc-corner">D</div>
-          <div class="cc-loc">雲林　·　麥寮</div>
-          <div class="cc-title">豐津都計臨路<br>農地 B</div>
-        </div>
-        <div class="cc-body">
-          <div class="cc-meta">
-            <div class="m"><div class="k">面　積</div><div class="v">547 <span style="font-size:13px;font-weight:500;">坪</span></div></div>
-            <div class="m"><div class="k">面寬×深度</div><div class="v">18×98 <span style="font-size:13px;font-weight:500;">米</span></div></div>
-            <div class="m price"><div class="k">單　價</div><div class="v">3.5 <span style="font-size:13px;font-weight:500;">萬</span></div></div>
-            <div class="m price"><div class="k">總　價</div><div class="v">1,915 <span style="font-size:13px;font-weight:500;">萬</span></div></div>
-          </div>
-          <div class="cc-tags">
-            <span class="pill gold">麥寮豐津都計內</span>
-            <span class="pill hot">總價親民好入手</span>
-            <span class="pill green">具貸款條件</span>
-          </div>
-          <span class="cc-cta">查看 D 案完整資訊</span>
-        </div>
-      </a>
-
-    </div>
+  <div class="area-note" style="margin-top:16px;">
+    C、D 兩案皆位於同一都計計畫區，計畫定位為綠色低碳產業聚落，預估引進 600 家廠商、7,000 人就業、年產值 210 億元。可依資金規模選擇其一，或雙案同時洽詢。
   </div>
-</section>
+</div>
 
-<!-- Area Service Callout (linked to zhongxing-area.html) -->
-<section class="section">
-  <a href="zhongxing-area.html" class="area-callout" style="text-decoration:none;color:inherit;">
-    <div>
-      <div class="tag">SPECIFIC  AREA  SERVICE</div>
-      <h3>不只 B 案 ── <span class="accent">中興交流道特定區</span>整合服務</h3>
-      <p>726 公頃新訂都市計畫推動中。除了 B 案營南段，瑞禾另有福溪段（293 坪/1,120 萬）等多筆可洽詢物件。從地主整合到買方對接，從都計法規到區段徵收 ── 提供完整區域服務。</p>
-    </div>
-    <span class="go-btn">了解區域整合服務</span>
-  </a>
-</section>
-
-<!-- Strategy -->
-<section class="section">
-  <div class="sec-head">
-    <span class="num-tag">03</span>
-    <span class="bar"></span>
-    <h2>適合誰</h2>
-    <span class="en">WHO IS THIS FOR</span>
-  </div>
-  <div class="feature-grid">
-    <div class="feat">
-      <div class="ic">◆</div>
-      <h3>已布局重劃前農地的投資人</h3>
-      <p>對「重劃前布局、重劃後變更」邏輯熟悉，希望持續在中部都計擴張節點上加碼的買方。B、C 案最適合。</p>
-    </div>
-    <div class="feat">
-      <div class="ic">◆</div>
-      <h3>尋找小額入手的新進投資人</h3>
-      <p>總價 2,000 萬以下、單筆即可進場、視條件具貸款空間。D 案總價 1,915 萬，是典型的入門配置。</p>
-    </div>
-    <div class="feat">
-      <div class="ic">◆</div>
-      <h3>需要立即可營運土地的法人/車輛業</h3>
-      <p>A 案已取得農業局農變同意函，可作汽車運輸停車場使用，省下變更程序的時間與不確定性，適合需即時調度大面積腹地的法人。</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section">
-  <div class="cta-banner">
-    <div>
-      <h3>四案聯合提案 · 完整資料索取</h3>
-      <p>謄本、登記簿、價格組合策略、繳款方式與貸款條件試算 ——<br>歡迎來電或加 LINE，由張現傑顧問為您客製化提案。</p>
-    </div>
-    <div class="btns">
-      <a class="btn" href="tel:0953909777">📞　0953-909-777</a>
-      <a class="btn line" href="https://line.me/ti/p/~0953909777">💬　LINE　0953909777</a>
-    </div>
-  </div>
-</section>
+</div><!-- /max-width wrapper -->
 
 <!-- Agent -->
-<section id="agent" class="section alt">
+<section id="agent" class="section alt" style="margin-top:40px;">
   <div class="inner">
     <div class="sec-head">
-      <span class="num-tag">04</span>
+      <span class="num-tag">—</span>
       <span class="bar"></span>
       <h2>洽詢顧問</h2>
       <span class="en">YOUR  CONSULTANT</span>
