@@ -634,12 +634,18 @@ img { max-width: 100%; display: block; }
 }
 .agent-card .info .contacts .c .k { color: var(--text-light); }
 .agent-card .info .contacts .c .v { font-weight: 700; color: var(--ink-forest); font-family: var(--font-num); }
+.agent-card .qr-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
 .agent-card .qr {
   text-align: center;
 }
 .agent-card .qr img {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border: 1px solid var(--rule-soft);
   border-radius: 8px;
 }
@@ -657,7 +663,7 @@ img { max-width: 100%; display: block; }
   }
   .agent-card .photo img { margin: 0 auto; width: 110px; height: 110px; }
   .agent-card .info .contacts { justify-content: center; }
-  .agent-card .qr { margin: 0 auto; }
+  .agent-card .qr-group { flex-direction: row; justify-content: center; flex-wrap: wrap; }
 }
 
 /* ========== Footer ========== */
