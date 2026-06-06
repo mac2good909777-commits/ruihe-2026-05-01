@@ -375,7 +375,7 @@ img { max-width: 100%; display: block; }
 .case-card.case-A .cc-head { background: linear-gradient(135deg, #5a7c4f, #2B5937); }
 .case-card.case-B .cc-head { background: linear-gradient(135deg, #c19a3d, #8A6E1A); }
 .case-card.case-C .cc-head { background: linear-gradient(135deg, #4f7e6b, #1f5b4b); }
-.case-card.case-D .cc-head { background: linear-gradient(135deg, #b86a4a, #8b3f23); }
+.case-card.case-D .cc-head { background: linear-gradient(135deg, #C0A434, #8A6E1A); }
 .case-card .cc-corner {
   position: absolute;
   top: 16px;
@@ -689,9 +689,11 @@ img { max-width: 100%; display: block; }
   gap: 14px;
 }
 .site-footer .brand img {
-  height: 36px;
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
+  height: 44px;
+  width: auto;
+  background: #fff;
+  border-radius: 6px;
+  padding: 3px 6px;
 }
 .site-footer .legal {
   font-size: 12px;
